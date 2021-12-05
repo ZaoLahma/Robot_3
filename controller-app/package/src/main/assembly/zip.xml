@@ -9,7 +9,8 @@
   </formats>
   <fileSets>
     <fileSet>
-      <directory>${project.basedir}/conf</directory>
+      <directory>${project.basedir}/src/main/resources/</directory>
+      <outputDirectory>/</outputDirectory>
     </fileSet>
   </fileSets>
   <dependencySets>

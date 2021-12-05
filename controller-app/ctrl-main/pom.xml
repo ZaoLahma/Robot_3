@@ -8,12 +8,10 @@
   </parent>
 
   <groupId>com.github.zaolahma</groupId>
-  <artifactId>package</artifactId>
+  <artifactId>ctrl-main</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <packaging>pom</packaging>
-
-  <name>package</name>
+  <name>ctrl-main</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -22,41 +20,32 @@
   <dependencies>
     <dependency>
       <groupId>com.github.zaolahma</groupId>
-      <artifactId>driver</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>com.github.zaolahma</groupId>
       <artifactId>core</artifactId>
       <version>${project.version}</version>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.github.zaolahma</groupId>
-      <artifactId>ctrl-main</artifactId>
+      <artifactId>driver</artifactId>
       <version>${project.version}</version>
+      <scope>provided</scope>
     </dependency>
   </dependencies>
 
   <build>
     <plugins>
+      <!--
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-assembly-plugin</artifactId>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <goals>
-              <goal>single</goal>
-            </goals>
-            <configuration>
-              <appendAssemblyId>false</appendAssemblyId>
-              <descriptors>
-                <descriptor>src/main/assembly/zip.xml</descriptor>
-              </descriptors>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifest>
+              <mainClass>com.github.zaolahma.Main</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin> -->
     </plugins>
   </build>
 </project>
